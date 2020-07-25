@@ -156,25 +156,25 @@ app.get('/api/books/:id', function(request, response) {
   });
 });
 
-// app.get('/', function(request, response) {
-//   response.sendFile(__dirname + '/index.html')
-// })
+app.get('/', function(request, response) {
+  response.sendFile(__dirname + '/index.html')
+})
 
-// app.get('/books/new', function(request, response) {
-//   response.sendFile(__dirname + '/new-book.html')
-// })
+app.get('/books/new', function(request, response) {
+  response.sendFile(__dirname + '/new-book.html')
+})
 
-// app.get('/books/:id', function(request, response) {
-//   response.sendFile(__dirname + '/book.html')
-// })
+app.get('/books/:id', function(request, response) {
+  response.sendFile(__dirname + '/book.html')
+})
 
-// app.get('/books/:id/edit', function(request, response) {
-//   response.sendFile(__dirname + '/edit-book.html')
-// })
+app.get('/books/:id/edit', function(request, response) {
+  response.sendFile(__dirname + '/edit-book.html')
+})
 
-// app.get('/authors/:name', function(request, response) {
-//   response.sendFile(__dirname + '/author.html')
-// })
+app.get('/authors/:name', function(request, response) {
+  response.sendFile(__dirname + '/author.html')
+})
 
 app.listen(port || 3000, function() {
   console.log(`Running at \`http://localhost:${port}\`...`)
