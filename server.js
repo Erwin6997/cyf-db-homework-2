@@ -35,7 +35,7 @@ app.post('/api/books', function(request, response) {
             if(error){
             response.sendStatus(400).send(error);
             }else {
-                response.sendStatus(200).send(result.ops[0]);
+                response.sendStatus(200).send(result.query);
             }
             client.close();
         });
@@ -57,8 +57,10 @@ app.delete('/api/books/:id', function(request, response) {
     collection.deleteOne(searchObject , function (error, result) {
         if(error){
           request.sendStatus(400).send(error);
+          console.log("Error", error);
             }else if (request.result) {
               request.sendStatus(204)
+              console.log("ADD NEW :", request.result);
             } else {
               request.sendStatus(404)
             }
