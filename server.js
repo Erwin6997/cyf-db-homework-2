@@ -92,7 +92,7 @@ app.put('/api/books/:id', function(request, response) {
       };
   collection.findOneAndUpdate(searchObject , update ,function (error, result) {
       if(error){
-        request.sendStatus(400).send(error);
+        request.status(400).send(error);
           }else if (request.result) {
             request.sendStatus(204)
           } else {
